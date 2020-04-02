@@ -19,8 +19,8 @@
             "mbed-trace.enable"                         : null,
             "events.shared-stacksize"                   : 2048,
             "nsapi.default-wifi-security"               : "WPA_WPA2",
-            "nsapi.default-wifi-ssid"                   : "\"SSID\"",
-            "nsapi.default-wifi-password"               : "\"PASSWORD\"",
+            "nsapi.default-wifi-ssid"                   : "\"sigdeltec\"",
+            "nsapi.default-wifi-password"               : "\"251327412287\"",
             "nsapi.default-cellular-apn"                : "\"APN\"",
             "nsapi.default-cellular-sim-pin"            : null,
             "nsapi.default-cellular-username"           : null,
@@ -35,7 +35,7 @@
         },
         "K64F": {
             "target.macros_add"                         : ["MBEDTLS_USER_CONFIG_FILE=\"mbedTLSConfig_mbedOS.h\""],
-            "target.network-default-interface-type"     : "ETHERNET",
+            "target.network-default-interface-type"     : "WIFI",
             "target.bootloader_img"                     : "bootloader/mbed-bootloader-k64f-internal_flash-no_rot-v4.1.0.bin",
             "target.header_offset"                      : "0x8000",
             "target.app_offset"                         : "0x8400",
@@ -50,7 +50,34 @@
             "storage_tdb_internal.internal_base_address": "(512*1024)",
             "storage_tdb_internal.internal_size"        : "(32*1024)",
             "storage.storage_type"                      : "TDB_INTERNAL",
-            "run-ci"                                    : 2
+            "run-ci"                                    : 2,
+
+            "esp8266.provide-default"                   : true,
+            "esp8266.tx"                                : "PTC17",
+            "esp8266.rx"                                : "PTC16"
+        },
+        "SDT64B": {
+            "target.macros_add"                         : ["MBEDTLS_USER_CONFIG_FILE=\"mbedTLSConfig_mbedOS.h\""],
+            "target.network-default-interface-type"     : "WIFI",
+            "target.bootloader_img"                     : "bootloader/mbed-bootloader-sdt64b-internal_flash-no_rot-v4.1.0.bin",
+            "target.header_offset"                      : "0x8000",
+            "target.app_offset"                         : "0x8400",
+            "target.restrict_size"                      : "0x74000",
+            "update-client.bootloader-details"          : "0x4A6C",
+            "update-client.application-details"         : "(32*1024)",
+            "update-client.storage-address"             : "(MBED_CONF_STORAGE_TDB_INTERNAL_INTERNAL_BASE_ADDRESS+MBED_CONF_STORAGE_TDB_INTERNAL_INTERNAL_SIZE)",
+            "update-client.storage-size"                : "(512*1024-MBED_CONF_STORAGE_TDB_INTERNAL_INTERNAL_SIZE)",
+            "update-client.storage-locations"           : 1,
+            "update-client.storage-page"                : 8,
+            "mbed-cloud-client.update-storage"          : "ARM_UCP_FLASHIAP",
+            "storage_tdb_internal.internal_base_address": "(512*1024)",
+            "storage_tdb_internal.internal_size"        : "(32*1024)",
+            "storage.storage_type"                      : "TDB_INTERNAL",
+            "run-ci"                                    : 2,
+
+            "esp8266.provide-default"                   : true,
+            "esp8266.tx"                                : "PTC17",
+            "esp8266.rx"                                : "PTC16"
         },
         "K66F": {
             "target.macros_add"                         : ["MBEDTLS_USER_CONFIG_FILE=\"mbedTLSConfig_mbedOS.h\""],
