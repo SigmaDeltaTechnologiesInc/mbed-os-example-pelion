@@ -42,3 +42,4 @@ mbed_cloud_dev_credentials.c
 /COMPONENT_WIFI_ESP32
 /COMPONENT_WIFI_ISM43362
 /COMPONENT_NUSD
+/pelion-e2e-python-test-library
