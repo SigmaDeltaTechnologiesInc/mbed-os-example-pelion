@@ -9,6 +9,14 @@ There is a more advanced example of the client with support for multiple operati
 
 <span class="notes">**Note:** If you want to use production provisioning modes, or use more advanced client features, those are demonstrated via [mbed-cloud-client-example](https://github.com/ARMmbed/mbed-cloud-client-example).</span>
 
+## For only SDT64B
+```
+mbed import https://github.com/SigmaDeltaTechnologiesInc/mbed-os-example-pelion
+cd mbed-os-example-pelion
+// Copy and paste your credentials(C file) to this folder
+mbed compile -t GCC_ARM -m SDT64B
+```
+
 ## Supported boards
 
 This table shows a list of boards that are supported.
