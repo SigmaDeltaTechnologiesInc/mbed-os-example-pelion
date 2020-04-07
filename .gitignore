@@ -36,3 +36,9 @@
 # App files
 update_default_resources.c
 mbed_cloud_dev_credentials.c
+
+# Library
+/mbed-cloud-client
+/COMPONENT_WIFI_ESP32
+/COMPONENT_WIFI_ISM43362
+/COMPONENT_NUSD
